@@ -1,0 +1,12 @@
+services:
+
+  python_interpreter:
+    image: python:3.13
+    container_name: python_interpreter_cont
+
+  unittest_job:
+    # image: python:3.13
+    build: .
+    depends_on:
+      - python_interpreter
+    command: python -m unittest ./test/test_main_module.py
