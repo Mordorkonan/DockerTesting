@@ -1,5 +1,8 @@
-import unittest
-from main_module import MainModule
+import unittest, os, sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from source.main_module import MainModule
 
 class MainModuleTestCase(unittest.TestCase):
 
@@ -16,7 +19,7 @@ class MainModuleTestCase(unittest.TestCase):
 		self.assertEqual(MainModule.div(3, 3), 1)
 
 	def test_div_zero(self):
-		self.assertEqual(MainModule.div(3, 0), 0)
+		self.assertEqual(MainModule.div(3, 0), None)
 
 
 if __name__ == '__main__': unittest.main()

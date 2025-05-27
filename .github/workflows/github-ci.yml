@@ -13,3 +13,5 @@ jobs:
         run: |
           docker build -t test-1 .
           docker run --name test-1-cont test-1
+          docker rm test-1-cont
+          docker rmi test-1
