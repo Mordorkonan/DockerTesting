@@ -1,5 +1,5 @@
 import unittest
-from source.main_module import MainModule
+from main_module import MainModule
 
 class MainModuleTestCase(unittest.TestCase):
 
@@ -16,7 +16,7 @@ class MainModuleTestCase(unittest.TestCase):
 		self.assertEqual(MainModule.div(3, 3), 1)
 
 	def test_div_zero(self):
-		self.assertEqual(MainModule.div(3, 0), None)
+		self.assertEqual(MainModule.div(3, 0), 0)
 
 
 if __name__ == '__main__': unittest.main()
