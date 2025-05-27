@@ -3,13 +3,13 @@ name: github-ci
 on: [push]
 
 jobs:
-	docker-job:
-		runs-on: ubuntu-latest
-		steps:
-			name: checkout
-			uses: actions/checkout@v4
+  docker-job:
+    runs-on: ubuntu-latest
+    steps:
+      name: checkout
+      uses: actions/checkout@v4
 
-			name: build and test 1
-			run: |
-				docker build -t test-1 .
-				docker run --name test-1-cont test-1
+      name: build and test 1
+      run: |
+        docker build -t test-1 .
+        docker run --name test-1-cont test-1
